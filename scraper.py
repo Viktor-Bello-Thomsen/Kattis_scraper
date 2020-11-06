@@ -46,10 +46,26 @@ def getNewProblems(seen, scraped):
 def downloadProblem(name, link):
     print(name, link)
     driver.get(link)
-    driver.find_element_by_xpath("//*[@id="wrapper"]/div/div[2]/div[1]/section/div/div[2]/div/div/a").click()
+    try:
+        driver.find_element_by_xpath("//*[@id='wrapper']/div/div[2]/div[1]/section/div/div[2]/div/div/a").click()
+    except:
+        print("No current solution for {} maybe you solved through domainsubset of kattis i.e. https://itu.kattis.com/".format(name))
+        return
     #Look at table and find solution with shortest time
-    #click and get code and write to new txt file depending on code language
+    #table of submission
+    submissions = driver.find_elements_by_xpath("//*[@id='wrapper']/div/div[2]/section/table/tbody/tr")
 
+    for sub in submissions:
+        #print(sub.get_attribute('innerHTML'))
+        cols = sub.find_elements_by_tag_name('td')
+        #status, time, language
+        link  = cols[0].get_attribute('href')
+        status = cols[3].text
+        time = cols[4].text
+        language = cols[5].text
+        print(link, status, time, language)
+
+    #click and get code and write to new txt file depending on code language
 
 
 if __name__ == "__main__":
@@ -76,6 +92,8 @@ if __name__ == "__main__":
     with open("solved.txt", "w+") as f:
         for name in sorted(problems):
             f.write(name+"\n")
+    print("New problems were: ")
+    for name in newProblems:
+        print(name)
 
-    print(newProblems)
     driver.quit()

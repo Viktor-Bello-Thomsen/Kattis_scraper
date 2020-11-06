@@ -2,18 +2,22 @@
 2048
 3D Printed Statues
 4 thought
+A Classy Problem
+A Different Problem
+A List Game
+A New Alphabet
+A Prize No One Can Win
+A Real Challenge
+A Towering Problem
 A1 Paper
-Aaah!
 ABC
+Aaah!
 Above Average
 Accounting
-A Classy Problem
 Adding Words
-A Different Problem
 Akcija
 Alehouse
 Alien Numbers
-A List Game
 All Pairs Shortest Path
 Alphabet
 Alphabet Animals
@@ -22,16 +26,12 @@ Alternative Anagram
 Altruistic Amphibians
 Amanda Lounges
 Amsterdam Distance
-A New Alphabet
 An Industrial Spy
 Another Brick in the Wall
 Apaxiaaaaaaaaaaaans!
-A Prize No One Can Win
-A Real Challenge
 Are You Listening?
 Army Strength (Easy)
 Army Strength (Hard)
-A Towering Problem
 Autori
 Average Rank
 Avion
@@ -60,10 +60,10 @@ Calculator
 Candle Box
 Candy Division
 Canvas Line
-Cardboard Container
+Car Trouble
 Card Hand Sorting
 Card Trick
-Car Trouble
+Cardboard Container
 Catalan Square
 Cetiri
 Cetvrta
@@ -94,8 +94,8 @@ Different Distances
 Digit Product
 Digits
 Disastrous Downtime
-Drinking Song
 Drink Responsibly
+Drinking Song
 Early Winter
 Eeny Meeny
 Egypt
@@ -111,8 +111,8 @@ Even Up Solitaire
 Excavator Expedition
 Expeditious Cubing
 Explosion Exploit
-Faktor
 FBI Universal Control Numbers
+Faktor
 Fence Bowling
 Fenwick Tree
 Ferry Loading
@@ -129,15 +129,15 @@ Forest Evolution
 Forest Fruits
 Fountain
 Friday the 13th
-Game of Throwns
 Game Rank
+Game of Throwns
 Gnoll Hypothesis
 Goblin Garden Guards
 Grandpa Bernie
 Grass Seed Inc.
 Grid
-Guessing Game
 Guess the Number
+Guessing Game
 Half a Cookie
 Halloween Loot
 Happy Happy Prime Prime
@@ -152,13 +152,13 @@ Hot Hike
 House Lawn
 Howl
 I Can Guess the Data Structure!
+I've Been Everywhere, Man
 ICPC Awards
 Import Spaghetti
 Incremental Induction
 Intergalactic Bidding
 Inverted Deck
 IsItHalloween.com
-I've Been Everywhere, Man
 Jane Eyre
 Janitor Troubles
 Jealous Youngsters
@@ -179,10 +179,10 @@ Last Factorial Digit
 Left Beehind
 Line Them Up
 Longest Increasing Subsequence
-ls
 Matrix Keypad
 Maximum Flow
 Mega Inversions
+Memory Game
 Mia
 Milestone Counter
 Minimum Spanning Tree
@@ -191,20 +191,18 @@ Modulo
 Movie Collection
 Mravojed
 Music Your Way
+NOP
 Nasty Hacks
 Nered
 Nine Knights
-NOP
 Nullary Computer
-Oddities
 Odd Man Out
+Oddities
 Opening Ceremony
-Östgötska
 Outing
 Pairing Socks
 Patuljci
 Paul Eigon
-Pebble Solitaire
 Pebble Solitaire
 Peg Solitaire
 Periodic Strings
@@ -231,8 +229,8 @@ R2
 Recount
 Relatives
 Restaurant Orders
-Reversed Binary Numbers
 Reverse Rot
+Reversed Binary Numbers
 Rhyme Power
 Roaming Romans
 Robert Hood
@@ -243,7 +241,6 @@ Seven Wonders
 Shattered Cake
 Shopaholic
 Sibice
-Simon Says
 Simon Says
 Simple Addition
 Single source shortest path, negative weights
@@ -274,8 +271,8 @@ Timebomb
 Toilet Seat
 Tower Construction
 Train Passengers
-Traveling Monk
 Travel Planning
+Traveling Monk
 Tri
 Trik
 Un-bear-able Zoo
@@ -290,3 +287,5 @@ Wizard Dance
 Wizard of Odds
 Yoda
 Zamka
+ls
+Östgötska

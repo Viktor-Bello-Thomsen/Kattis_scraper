@@ -2,6 +2,7 @@ from decouple import config
 from selenium import webdriver
 from sys import exit
 from selenium.webdriver.support.ui import WebDriverWait
+import os
 
 def KattisLogin():
     driver.get("https://open.kattis.com/login/email?")
@@ -55,20 +56,39 @@ def downloadProblem(name, link):
     #table of submission
     submissions = driver.find_elements_by_xpath("//*[@id='wrapper']/div/div[2]/section/table/tbody/tr")
 
+    valids = []
+
     for sub in submissions:
         #print(sub.get_attribute('innerHTML'))
         cols = sub.find_elements_by_tag_name('td')
         #status, time, language
-        link  = cols[0].get_attribute('href')
+        link  = cols[0]
         status = cols[3].text
         time = cols[4].text
         language = cols[5].text
-        print(link, status, time, language)
+        if status == "Accepted":
+            valids.append((time, language, link))
 
+    doneLanguages = set()
+    toScrape = []
+    valids.sort(key = lambda k : k[0])
+    for time, language, link in valids:
+        if language not in doneLanguages:
+            doneLanguages.add(language)
+            #create file in language folder
+            toScrape.append((time, language, link))
+            if not os.path.exists(language):
+                os.makedirs(language)
     #click and get code and write to new txt file depending on code language
+    for solution in toScrape:
+        solution[2].click()
+        elements = driver.find_elements_by_xpath("/html/body/div[1]/div/div[3]/section/div[3]/div/div/div/div/div")
+        for ele in elements:
+            print(ele.text)
 
 
 if __name__ == "__main__":
+
     #Login
     email = config('EMAIL')
     password = config('PASSWORD')

@@ -3,16 +3,13 @@
 3D Printed Statues
 4 thought
 A Classy Problem
-A Different Problem
 A List Game
 A New Alphabet
+A Prize No One Can Win
 A Real Challenge
 A Towering Problem
 A1 Paper
 ABC
-Aaah!
-Above Average
-Accounting
 Adding Words
 Akcija
 Alehouse
@@ -31,6 +28,7 @@ Apaxiaaaaaaaaaaaans!
 Are You Listening?
 Army Strength (Easy)
 Army Strength (Hard)
+Array of Discord
 Autori
 Average Rank
 Avion
@@ -64,6 +62,7 @@ Card Hand Sorting
 Card Trick
 Cardboard Container
 Catalan Square
+Cent Savings
 Cetiri
 Cetvrta
 Circular DNA
@@ -72,6 +71,7 @@ Clock Pictures
 Cocoa Coalition
 Code Cleanups
 Coffee Date
+Coin Stacks
 Cold-puter Science
 Collatz Conjecture
 Compound Words
@@ -80,6 +80,7 @@ Conversation Log
 Cookie Selection
 Costume Contest
 Counting Stars
+Dams in Distress
 Datum
 Daydreaming Stockbroker
 Death Knight Hero
@@ -117,6 +118,7 @@ Fenwick Tree
 Ferry Loading
 Fifty Shades of Pink
 Filip
+Film Critics
 Financial Planning
 Firetrucks Are Red
 Fishmongers
@@ -130,6 +132,7 @@ Fountain
 Friday the 13th
 Game Rank
 Game of Throwns
+Gig Combinatorics
 Gnoll Hypothesis
 Goblin Garden Guards
 Grandpa Bernie
@@ -150,6 +153,7 @@ Horror List
 Hot Hike
 House Lawn
 Howl
+Hyacinth
 I Can Guess the Data Structure!
 I've Been Everywhere, Man
 ICPC Awards
@@ -162,6 +166,7 @@ Jane Eyre
 Janitor Troubles
 Jealous Youngsters
 Job Expenses
+Joining Flows
 Joint Attack
 Judging Troubles
 Jumbled Compass
@@ -182,6 +187,7 @@ Matrix Keypad
 Maximum Flow
 Mega Inversions
 Memory Game
+Methodic Multiplication
 Mia
 Milestone Counter
 Minimum Spanning Tree
@@ -234,6 +240,7 @@ Rhyme Power
 Roaming Romans
 Robert Hood
 Robots on a Grid
+Science!
 Secret Message
 Secure Doors
 Seven Wonders

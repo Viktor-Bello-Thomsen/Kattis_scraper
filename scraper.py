@@ -44,25 +44,38 @@ def getNewProblems(seen, scraped):
             newProblems.add(problemdID)
     return newProblems
 
-def downloadProblem(name, link):
-    print(name, link)
+def getFileTypeOfLanguage(language):
+    dic = {"Java": ".java", "C++": ".cpp", "Python 3": ".py"}
+    return dic[language]
+
+def goToSolutions(link):
     driver.get(link)
     try:
         driver.find_element_by_xpath("//*[@id='wrapper']/div/div[2]/div[1]/section/div/div[2]/div/div/a").click()
     except:
         print("No current solution for {} maybe you solved through domainsubset of kattis i.e. https://itu.kattis.com/".format(name))
         return
-    #Look at table and find solution with shortest time
+
+def goToSubmission(subID):
+    driver.get("https://open.kattis.com/submissions/{}".format(subID))
+
+def createFile(link, language, name):
+    goToSubmission(link)
+    elements = driver.find_elements_by_xpath("/html/body/div[1]/div/div[3]/section/div[3]/div/div/div/div/div")
+    with open("{0}/{1}{2}".format(language, name, getFileTypeOfLanguage(language)), "w") as f:
+        for ele in elements:
+            f.write(ele.text + "\n")
+
+
+def downloadProblem(problemName, problemLink):
+    goToSolutions(problemLink)
     #table of submission
     submissions = driver.find_elements_by_xpath("//*[@id='wrapper']/div/div[2]/section/table/tbody/tr")
-
     valids = []
-
+    #Look at table and find valid ones
     for sub in submissions:
-        #print(sub.get_attribute('innerHTML'))
         cols = sub.find_elements_by_tag_name('td')
-        #status, time, language
-        link  = cols[0]
+        link  = cols[0].text
         status = cols[3].text
         time = cols[4].text
         language = cols[5].text
@@ -75,20 +88,14 @@ def downloadProblem(name, link):
     for time, language, link in valids:
         if language not in doneLanguages:
             doneLanguages.add(language)
-            #create file in language folder
             toScrape.append((time, language, link))
             if not os.path.exists(language):
                 os.makedirs(language)
     #click and get code and write to new txt file depending on code language
-    for solution in toScrape:
-        solution[2].click()
-        elements = driver.find_elements_by_xpath("/html/body/div[1]/div/div[3]/section/div[3]/div/div/div/div/div")
-        for ele in elements:
-            print(ele.text)
-
+    for time, language, link in toScrape:
+        createFile(link, language, problemName)
 
 if __name__ == "__main__":
-
     #Login
     email = config('EMAIL')
     password = config('PASSWORD')
@@ -106,12 +113,16 @@ if __name__ == "__main__":
     newProblems = getNewProblems(priviousProblems, problems)
     #Handle each new problem
     for problemdID in newProblems:
-        downloadProblem(problemdID, problems[problemdID])
-
+        try:
+            downloadProblem(problemdID, problems[problemdID])
+        except:
+            print("problem trying to scrape {}".format(problemdID))
+            
     #Write names to solved.txt so we dont handle them again next scrape
     with open("solved.txt", "w+") as f:
         for name in sorted(problems):
             f.write(name+"\n")
+
     print("New problems were: ")
     for name in newProblems:
         print(name)
